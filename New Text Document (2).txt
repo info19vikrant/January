@@ -1,0 +1,228 @@
+9th jan 2017 (monday)
+Appending data to file
+***************************
+***************************
+package file_hndlg;
+
+import java.io.FileOutputStream;
+import java.util.*;
+public class Prg1 {
+	String path,rno,name;
+	Scanner sc;
+	int ch;
+	public Prg1()
+	{
+	 sc=new Scanner(System.in);
+	}
+	public void fun()
+	{
+		System.out.println("Enter the file name:");
+		path=sc.next();
+			try{
+				FileOutputStream fout=new FileOutputStream(path);
+		System.out.println("Enter roll no.");
+		rno=sc.next();
+		byte b[]=rno.getBytes();
+		System.out.println("Enter name");
+		name=sc.next();
+		byte c[]=name.getBytes();
+		fout.write(b);
+		fout.write('-');
+		fout.write(c);
+		fout.write('\n');
+		System.out.println("Enter 1 to enter more records");
+		ch=sc.nextInt();
+		if(ch==1){
+			System.out.println("Enter roll no.");
+			rno=sc.next();
+			byte d[]=rno.getBytes();
+			System.out.println("Enter name");
+			name=sc.next();
+			byte e[]=name.getBytes();
+			fout.write(d);
+			fout.write('-');
+			fout.write(e);
+			fout.write('\n');
+		}
+		fout.close();
+		} catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+
+	public static void main(String[] args) {
+		Prg1 ob=new Prg1();
+		ob.fun();
+
+	}
+
+}
+------------------------------------------------------------------
+10th jan tuesday
+adding logs to file
+*********************
+*********************
+*********************
+package file_hndlng;
+
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.util.*;
+
+public class Prg1 {
+	String path, rno, name;
+	Scanner sc;
+	int ch;
+
+	public Prg1() {
+		sc = new Scanner(System.in);
+	}
+
+	public void fun() {
+		System.out.println("Enter the file name:");
+		path = sc.next();
+		try {
+			FileWriter fout = new FileWriter(path);
+			System.out.println("Enter roll no.");
+			rno = sc.next();
+			System.out.println("Enter name");
+			name = sc.next();
+
+			StringBuilder str = new StringBuilder(rno);
+			str = new StringBuilder(name);
+			/*str.append(rno);
+
+			str1.append(name);*/
+			
+			System.out.println("Enter 1 to enter more records");
+			ch = sc.nextInt();
+			while(ch==1) {
+				System.out.println("Enter roll no.");
+				rno = sc.next();
+				
+				System.out.println("Enter name");
+				name = sc.next();
+				
+				str.append(rno);
+				str.append(name);
+
+				fout.append(str);
+				//fout.append(str1);
+				System.out.println("Enter 1 to enter more records");
+				ch = sc.nextInt();
+			}
+			fout.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+
+	public static void main(String[] args) {
+		Prg1 ob = new Prg1();
+		ob.fun();
+
+	}
+
+}
+********************************************************
+********************************************************
+11th jan wednesday
+searching alphabat in string
+********************************************************
+********************************************************
+
+package file_hndlng;
+import java.util.Scanner;
+public class StrSearch {
+	String text;
+	Scanner sc;
+	int count=0;
+	public void fun()
+	{
+		sc=new Scanner(System.in);
+		System.out.println("Enter the text");
+		text=sc.nextLine();
+		for(int i=1;i<text.length();i++)
+		{
+			if(text.charAt(i)=='s')
+			{
+				count++;
+				System.out.println(i);
+			}}
+		System.out.println(count +" times s is encountered");
+	}
+	public static void main(java.lang.String[] args) {
+	StrSearch ob=new StrSearch();
+	ob.fun();
+	}}
+********************************************************
+********************************************************
+11th jan wednesday
+searching and replacing word in string
+********************************************************
+********************************************************
+package file_hndlng;
+
+import java.util.Scanner;
+
+public class StrReplace {
+	String text;
+	Scanner sc;
+	int count = 0;
+
+	public void fun() {
+		sc = new Scanner(System.in);
+		System.out.println("Enter the text");
+		text = sc.nextLine();
+		int intIndex = text.indexOf("stupid");
+		if (intIndex == -1) {
+		} else {
+			text = text.replaceAll("\\bstupid\\b", "******");
+		}
+		int intIndex1 = text.indexOf("foolish");
+		if (intIndex1 == -1) {
+		} else {
+			text = text.replaceAll("\\bfoolish\\b", "******");
+		}
+		int intIndex2 = text.indexOf("nonsense");
+		if (intIndex2 == -1) {
+		} else {
+			text = text.replaceAll("\\bnonsense\\b", "******");
+		}
+
+		int intIndex3 = text.indexOf("rascal");
+		if (intIndex3 == -1) {
+		} else {
+			text = text.replaceAll("\\brascal\\b", "******");
+		}
+		System.out.println(text);
+	}
+
+	public static void main(java.lang.String[] args) {
+		StrReplace ob = new StrReplace();
+		ob.fun();
+	}
+}
+********************************************************
+********************************************************
+11th jan wednesday
+reversing word in string
+********************************************************
+********************************************************
+package file_hndlng;
+
+import java.util.Scanner;
+
+public class StrRev {
+
+	public static void main(String[] args) {
+		String text;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the text");
+		text = sc.nextLine();
+		String reverse = new StringBuffer(text).reverse().toString();
+		System.out.println(reverse);
+
+	}
+}

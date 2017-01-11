@@ -1,0 +1,316 @@
+
+1
+23
+456
+78910
+
+
+
+package loops;
+
+public class Num_piramid {
+	int i,j;
+	public void fun()
+	{
+		for(i=1;i<=4;i++)
+		{
+			for(j=i;j<=i+i;j++)
+			{
+				System.out.print(j);
+			}
+			System.out.println("");
+		}
+		
+	}
+public static void main(String args[])
+{
+	Num_piramid ob=new Num_piramid();
+	ob.fun();
+}
+}
+======================================================================================================================================
+
+
+1
+12
+123
+1234
+
+
+
+
+
+package loops;
+
+public class Num_piramid {
+	int i,j;
+	public void fun()
+	{
+		for(i=1;i<=5;i++)
+		{
+			for(j=5;j>=i;j--)
+			{
+				System.out.print(j);
+			}
+			System.out.println("");
+		}
+		
+	}
+public static void main(String args[])
+{
+	Num_piramid ob=new Num_piramid();
+	ob.fun();
+}
+}
+======================================================================================================================================
+
+
+
+1
+12
+123
+1234
+12345
+
+
+
+
+package loops;
+
+public class Num_piramid {
+	int i,j;
+	public void fun()
+	{
+		for(i=1;i<=5;i++)
+		{
+			for(j=1;j<=i;j++)
+			{
+				System.out.print(j);
+			}
+			System.out.println("");
+		}
+		
+	}
+public static void main(String args[])
+{
+	Num_piramid ob=new Num_piramid();
+	ob.fun();
+}
+}
+======================================================================================================================================
+FACTORIAL
+
+
+
+
+
+
+package loops;
+
+public class Fact {
+	int i,fact=1,number=5;  
+	  public void fun()
+	  {
+		  
+	  for(i=1;i<=number;i++)  
+	      fact=fact*i;    
+	    
+	  System.out.println("Factorial of "+number+" is: "+fact);  
+	
+	  }
+	public static void main(String[] args) {
+	Fact ob=new Fact();
+	ob.fun();
+	}
+
+}
+======================================================================================================================================
+
+FIBONICCI
+
+
+
+
+package loops;
+
+public class Fibonicci {
+	int n1=0,n2=1,n3,i,count=10;  
+	public void fun()
+	{
+	 System.out.print(n1+" "+n2);   
+	    
+	 for(i=2;i<count;++i)
+	 {    
+	  n3=n1+n2;    
+	  System.out.print(" "+n3);    
+	  n1=n2;    
+	  n2=n3;    
+	 }
+	}
+
+======================================================================================================================================
+PALLINDROME
+
+
+package loops;
+import java.util.*;
+public class Pallindrome {
+	 int r,sum=0,temp,n,m;  
+	
+	  public void fun(){
+		  System.out.println("Enter number");
+		  Scanner in = new Scanner(System.in);
+		    n = in.nextInt();
+		  temp=n;
+	  while(n>0){    
+	   r=n%10; 
+	   sum=(sum*10)+r;    
+	   n=n/10;    
+	  }    
+	  if(temp==sum)    
+	   System.out.println("palindrome number ");    
+	  else    
+	   System.out.println("not palindrome");    
+	  }
+
+	public static void main(String[] args) {
+		Pallindrome ob=new Pallindrome();
+		ob.fun();
+	}
+
+}
+======================================================================================================================================
+
+REVERSE
+
+
+
+
+package loops;
+import java.util.*;
+public class Pallindrome {
+	 int r,sum=0,temp,n,m;  
+	
+	  public void fun(){
+		  System.out.println("Enter number");
+		  Scanner in = new Scanner(System.in);
+		    n = in.nextInt();
+		  temp=n;
+	  while(n>0){    
+	   r=n%10; 
+	   sum=(sum*10)+r;    
+	   n=n/10;    
+	  }    
+	  if(temp==sum)    
+	   System.out.println("palindrome number ");    
+	  else    
+	   System.out.println("not palindrome");    
+	  }
+
+	public static void main(String[] args) {
+		Pallindrome ob=new Pallindrome();
+		ob.fun();
+	}
+
+}
+======================================================================================================================================
+TABLE
+
+
+package loops;
+
+public class Table {
+	int i,ans,num=2;
+	public void fun()
+	{
+		for(i=1;i<=10;i++)
+		{
+		ans=num*i;
+	    System.out.println(num+"*"+i+"="+ans);
+		
+		}
+	}
+
+	public static void main(String[] args) {
+	Table ob=new Table();
+	ob.fun();
+
+	}
+
+}
+	public static void main(String[] args) {
+		Fibonicci ob=new Fibonicci();
+		ob.fun();
+		}
+	}
+
+======================================================================================================================================
+
+
+
+Constructor
+
+
+
+
+
+
+package loops;
+
+public class Cons {
+	int i=8,j=9;
+
+	Cons()
+	{
+		i=0; j=0;
+		System.out.println(i+""+j);
+	}
+
+	public static void main(String[] args) {
+		Cons ob=new Cons();
+
+	}
+
+}
+======================================================================================================================================
+
+
+
+this operator
+
+
+
+
+package loops;
+
+public class Cons {
+	int i=8,j=9,sum;
+
+	Cons(int i, int j)
+	{   sum=this.i+this.j;
+		System.out.println(sum);
+	}
+
+	public static void main(String[] args) {
+		Cons ob=new Cons(5,4);
+
+	}
+
+}
+======================================================================================================================================
+final var
+
+
+package poly;
+
+public class Overriding {
+	
+
+	public static void main(String[] args) {
+		final int a=20;
+		a=66;
+		System.out.println(a);
+	
+	}
+
+}
